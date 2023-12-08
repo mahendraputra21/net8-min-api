@@ -1,0 +1,35 @@
+﻿@net8-aot-api_HostAddress = http://localhost:5254
+
+GET {{net8-aot-api_HostAddress}}/todoitems
+
+### Get All Todo List
+
+POST {{net8-aot-api_HostAddress}}/todoitems
+Content-Type: application/json
+{
+  "Name" : "Explore .NET 8 Show Endpoint",
+  "IsComplete" : false
+}
+### Create new Todo
+
+GET {{net8-aot-api_HostAddress}}/todoitems/1
+
+### Get Todo By Id
+
+PUT {{net8-aot-api_HostAddress}}/todoitems/1
+Content-Type: application/json
+
+{
+  "name": "Explore .NET 8 Native AOT",
+  "isComplete": false
+}
+
+### Update Todo by Id
+
+DELETE {{net8-aot-api_HostAddress}}/todoitems/1
+
+### Delete Todo By Id
+
+GET {{net8-aot-api_HostAddress}}/todoitems/complete
+
+### Get All Todo with status Complete
